@@ -1,0 +1,215 @@
+#homeContainer {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 92vh;
+  margin-top: 8vh;
+}
+
+#filter {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#logo {
+  margin: 0;
+  padding: 0;
+  width: 18em;
+  height: 20em;
+}
+
+#second {
+  margin: 0;
+  padding: 0;
+  /* padding-top: 5em; */
+  height: 100vh;
+  width: 100%;
+  background: #EDE4DB;
+}
+
+@media (max-width: 700px) {
+  #second {
+    height: 170vh;
+  }
+
+  #prelude {
+    margin-top: -8em;
+  }
+
+  #prelude p{
+    margin-right: 4em;
+  }
+  
+  video {
+    height: 115%;
+  }
+}
+
+#image_figure{
+  border-radius: 11em 11em;
+  width: 16em;
+  height: 30em;
+  background-image: url('https://i.blogs.es/4e6c2f/tabla-quesos8/1366_2000.jpg');
+  background-position: 55% 35%;
+}
+
+#prelude {
+  padding: 2em;
+  padding-top: 5em;
+  margin-left: 5em;
+  color: #752329;
+}
+
+#prelude h1, h2 {
+  font-weight: 600;
+  text-align: left;
+  font-family: 'LaLuxes';
+}
+
+#prelude h4 {
+  margin-top: 1.2em;
+  font-weight: 400;
+  font-family: 'Josefin';
+}
+
+#prelude p {
+  font-family: 'Avenir';
+}
+
+@media (max-width: 700px) {
+
+  .col-1 {
+    width: 15em;
+  }
+
+  #image_figure{
+    border-radius: 7em 7em;
+    width: 13em;
+    height: 24em;
+    margin-top: 5em;
+  }
+}
+
+#third {
+  margin: 0;
+  padding: 0;
+  /* border: solid 3px cyan ; */
+  height: 92vh;
+  width: 100%;
+  background: #3F191E;
+}
+
+#third .col-4 {
+  margin-inline: 3em;
+  width: 12em;
+  height: 22em;
+  border: solid 1px #DCA15D;
+  border-radius: 7em 7em 0 0;
+  outline: solid 1px #DCA15D;
+  outline-offset: 8px;
+}
+
+#third .col-4 h1 {
+  font-family: 'LaLuxes';
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.8em;
+  padding-top: 1.5em;
+  color: #EDE4DB;
+}
+
+#third .col-4 button {
+  margin-top: 8%;
+  margin-left: 25%;
+  border: solid 2px #EDE4DB;
+  color: #EDE4DB;
+  font-family: 'Josefin';
+  background: none;
+  width: 6em;
+  height: 2em;
+  border-radius: 1em;
+}
+
+#card_1 {
+  background-image: url('https://i.pinimg.com/564x/07/99/2d/07992da3dbdf66f12f0147ea44e33121.jpg');
+  background-size: 190%;
+  background-position: 20%;
+}
+
+#card_2 {
+  background-image: url('https://i.pinimg.com/564x/24/29/65/242965916ecf992794b62a637fb988e6.jpg');
+  background-size: 110%;
+  /* background-position: ; */
+}
+
+#card_3 {
+  background-image: url('https://i.pinimg.com/564x/31/47/80/31478032558d75be93d5e01fda03941b.jpg');
+  background-size: 150%;
+  background-position: 50%;
+
+}
+
+#card_4 {
+  background-image: url('https://i.pinimg.com/564x/2d/49/62/2d4962b084c322dc768681720c29bab0.jpg');
+  background-size: 140%;
+  background-position: 50% 0%;
+}
+
+.product_container {
+  background: rgba(26, 48, 58, 0.65);
+  margin-top: 114.6%;
+  height: 10em;
+  margin-left: -0.76em;
+  margin-right: -0.77em;
+
+}
+
+
+@media (max-width: 700px) {
+  
+  #third {
+    margin: 0;
+    padding: 0;
+    height: 260vh;
+    width: 100vw;
+    padding-block: 5em;
+  }
+  
+  #third #card_2, #third #card_4{
+    border-radius: 0 0 7em 7em;
+  }
+  
+  #third .col-4 {
+    margin-block: 2em;
+  }
+  
+  #container_alt {
+    border-radius: 0 0 6em 6em;
+  }
+}
+
+
+/* __REFERENCE__ */
+
+PALETTE {
+  color: #EDE4DB;
+  color: #EFDAC7;
+  color: #F9DDD1;
+  color: #F1BEAD;
+  color: #DCA15D;
+  color: #1A303A;
+  color: #752329;
+  color: #3F191E;
+}

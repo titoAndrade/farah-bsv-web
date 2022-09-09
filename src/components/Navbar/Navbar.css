@@ -1,0 +1,152 @@
+.Navbar {
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #F6F6F6; */
+  background: #EDE4DB;
+  font-family: 'josefin';
+  font-weight: 400;
+  font-size: 1em;
+  padding-inline: 24px;
+  border-bottom: 1px solid rgba(63, 25, 30, 0.4);
+}
+
+.nav-logo {
+  font-weight: 700;
+  margin: 15px;
+  color: #752329;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-family: 'LaLuxes';
+  font-size: 16px;
+  z-index: 10;
+}
+
+.nav-logo:hover {
+  color: #555;
+}
+
+.nav-items a {
+  color: #752329;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 24px;
+  position: relative;
+}
+
+.nav-items  a:hover {
+  color: #555;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .Navbar {
+    padding-inline: 10px;
+    margin: 0;
+  }
+
+  .nav-items {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-1000%);
+    transition: all .45s;
+  }
+
+ .nav-items a {
+  /* background: #EDE4DB; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-block: 2em;
+  text-align: center;
+  background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    text-align: center;
+    padding-bottom: 3.5em;
+    margin-bottom: 0.5em;
+  /* border-bottom: 1px solid rgba(63, 25, 30, 0.4); */
+  color: #752329;
+  font-weight: 600;
+  font-family: 'josefin';
+ }
+
+ #last {
+  padding-bottom: 3.5em;
+
+ }
+
+  .nav-items a::before {
+      background: transparent;
+  }
+
+  .nav-items.open {
+      transform: translateY(0);
+  }
+
+  .nav-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .bar {
+    position: relative;
+    width: 32px;
+    height: 1px;
+    background: #752329;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .bar::before,
+  .bar::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #752329;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .bar::before {
+    width: 32px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+
+  .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+
+  .nav-toggle.open .bar {
+      transform: translateX(-40px);
+      background: transparent;
+  }
+
+  .nav-toggle.open .bar::before {
+      width: 32px;
+      transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .nav-toggle.open .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+
+}

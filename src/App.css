@@ -1,38 +1,468 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Avenir';
+  src: url(fonts/AvenirNextLTPro-Regular.eot),
+       url(fonts/AvenirNextLTPro-Regular.otf),
+       url(fonts/AvenirNextLTPro-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Josefin';
+  src: url(fonts/JosefinSans-Regular.eot),
+       url(fonts/JosefinSans-Regular.otf),
+       url(fonts/JosefinSans-Regular.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'LaLuxes';
+  src: url(fonts/LaLuxesSerif-Regular.eot),
+       url(fonts/LaLuxesSerif-Regular.otf),
+       url(fonts/LaLuxesSerif-Regular.ttf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#all {
+  margin: 0;
+  padding: 0;
+  width:100%;
+}
+
+
+/* __NAVBAR__ */
+
+.Navbar {
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background: #F6F6F6; */
+  background: #EDE4DB;
+  font-family: 'josefin';
+  font-weight: 400;
+  font-size: 1em;
+  padding-inline: 24px;
+  border-bottom: 1px solid rgba(63, 25, 30, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo {
+  font-weight: 700;
+  margin: 15px;
+  color: #752329;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-family: 'LaLuxes';
+  font-size: 16px;
+  z-index: 10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-logo:hover {
+  color: #555;
+}
+
+.nav-items a {
+  color: #752329;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 24px;
+  position: relative;
+}
+
+.nav-items  a:hover {
+  color: #555;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  #all {
+  max-width: 100%;
+  overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Navbar {
+    padding-inline: 10px;
+    margin: 0;
+  }
+
+  .nav-items {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-1000%);
+    transition: all .45s;
+  }
+
+ .nav-items a {
+  /* background: #EDE4DB; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-block: 2em;
+  text-align: center;
+  background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    text-align: center;
+    padding-bottom: 3.5em;
+    margin-bottom: 0.5em;
+  /* border-bottom: 1px solid rgba(63, 25, 30, 0.4); */
+  color: #752329;
+  font-weight: 600;
+  font-family: 'josefin';
+ }
+
+ #last {
+  padding-bottom: 3.5em;
+
+ }
+
+  .nav-items a::before {
+      background: transparent;
+  }
+
+  .nav-items.open {
+      transform: translateY(0);
+  }
+
+  .nav-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .bar {
+    position: relative;
+    width: 32px;
+    height: 1px;
+    background: #752329;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .bar::before,
+  .bar::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #752329;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .bar::before {
+    width: 32px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+
+  .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+
+  .nav-toggle.open .bar {
+      transform: translateX(-40px);
+      background: transparent;
+  }
+
+  .nav-toggle.open .bar::before {
+      width: 32px;
+      transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .nav-toggle.open .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+
+}
+
+/* __HOME__ */
+
+#homeContainer {
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+  height: 100%;
+  margin-top: 8vh;
+}
+
+#filter {
+  margin: 0;
+  padding: 0;
+  height: 92vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#logo {
+  margin: 0;
+  padding: 0;
+  width: 18em;
+  height: 20em;
+}
+
+#second {
+  margin: 0;
+  padding: 0;
+  /* padding-top: 5em; */
+  height: 100vh;
+  width: 100%;
+  background: #EDE4DB;
+}
+
+@media (max-width: 700px) {
+  #second {
+    height: 170vh;
+  }
+
+  #prelude {
+    margin-top: -8em;
+  }
+
+  #prelude p{
+    margin-right: 4em;
+  }
+  
+  video {
+    height: 115%;
   }
 }
+
+#image_figure{
+  border-radius: 11em 11em;
+  width: 16em;
+  height: 30em;
+  background-image: url('https://i.blogs.es/4e6c2f/tabla-quesos8/1366_2000.jpg');
+  background-position: 55% 35%;
+}
+
+#prelude {
+  padding: 2em;
+  padding-top: 5em;
+  margin-left: 5em;
+  color: #752329;
+}
+
+#prelude h1, h2 {
+  font-weight: 600;
+  text-align: left;
+  font-family: 'LaLuxes';
+}
+
+#prelude h4 {
+  margin-top: 1.2em;
+  font-weight: 400;
+  font-family: 'Josefin';
+}
+
+#prelude p {
+  font-family: 'Avenir';
+}
+
+@media (max-width: 700px) {
+
+  .col-1 {
+    width: 15em;
+  }
+
+  #image_figure{
+    border-radius: 7em 7em;
+    width: 13em;
+    height: 24em;
+    margin-top: 5em;
+  }
+}
+
+#third {
+  margin: 0;
+  padding: 0;
+  height: 92vh;
+  width: 100%;
+  max-width: 100%;
+  background: #3F191E;
+}
+
+#third .col-4 {
+  margin-inline: 3em;
+  width: 12em;
+  height: 22em;
+  border: solid 1px #DCA15D;
+  border-radius: 7em 7em 0 0;
+  outline: solid 1px #DCA15D;
+  outline-offset: 8px;
+}
+
+#third .col-4 h1 {
+  font-family: 'LaLuxes';
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.8em;
+  padding-top: 1.5em;
+  color: #EDE4DB;
+}
+
+#third .col-4 button {
+  margin-top: 8%;
+  margin-left: 25%;
+  border: solid 2px #EDE4DB;
+  color: #EDE4DB;
+  font-family: 'Josefin';
+  background: none;
+  width: 6em;
+  height: 2em;
+  border-radius: 1em;
+}
+
+#card_1 {
+  background-image: url('https://i.pinimg.com/564x/07/99/2d/07992da3dbdf66f12f0147ea44e33121.jpg');
+  background-size: 190%;
+  background-position: 20%;
+}
+
+#card_2 {
+  background-image: url('https://i.pinimg.com/564x/24/29/65/242965916ecf992794b62a637fb988e6.jpg');
+  background-size: 110%;
+  /* background-position: ; */
+}
+
+#card_3 {
+  background-image: url('https://i.pinimg.com/564x/31/47/80/31478032558d75be93d5e01fda03941b.jpg');
+  background-size: 150%;
+  background-position: 50%;
+
+}
+
+#card_4 {
+  background-image: url('https://i.pinimg.com/564x/2d/49/62/2d4962b084c322dc768681720c29bab0.jpg');
+  background-size: 140%;
+  background-position: 50% 0%;
+}
+
+.product_container {
+  background: rgba(26, 48, 58, 0.65);
+  margin-top: 114.6%;
+  height: 10em;
+  margin-left: -0.76em;
+  margin-right: -0.77em;
+}
+
+#fourth {
+  margin: 0;
+  border: solid 2px cyan;
+  width: 100%;
+  height: 92vh;
+  background: none;
+  z-index: -1;
+}
+
+/* __REFERENCE__ */
+
+PALETTE {
+  color: #EDE4DB;
+  color: #EFDAC7;
+  color: #F9DDD1;
+  color: #F1BEAD;
+  color: #DCA15D;
+  color: #1A303A;
+  color: #752329;
+  color: #3F191E;
+}
+
+@media (max-width: 700px) {
+  
+  #third {
+    margin: 0;
+    padding: 0;
+    height: 260vh;
+    width: 100vw;
+    padding-block: 5em;
+  }
+  
+  #third #card_2, #third #card_4{
+    border-radius: 0 0 7em 7em;
+  }
+  
+  #third .col-4 {
+    margin-block: 2em;
+  }
+  
+  #container_alt {
+    border-radius: 0 0 6em 6em;
+  }
+}
+
+/* __FOOTER__ */
+
+.FooterContainer {
+  margin: 0;
+  padding: 0;
+  /* margin-top: 192vh; */
+  width: 100%;
+  height: 5.5em;
+  overflow: hidden;
+  background: #EDE4DB;
+}
+
+.FooterContainer .row {
+  /* border: solid 1px #1A303A; */
+  margin: 1.5em 2em;
+  justify-content: space-between;
+}
+
+.FooterContainer img {
+  width: 1.3em;
+  margin-inline: 0.6em;
+  margin-bottom: 0.4em;
+}
+
+.FooterContainer #mail_icon {
+  width: 1.5em;
+}
+
+#company_col {
+  font-family: 'laluxes';
+  font-size: 0.8em;
+  margin-top: 0.95em;
+}
+
+#icon_col {
+  text-align: right;
+  padding-right: 0;
+}
+
+@media (max-width: 700px) {
+
+  .FooterContainer img {
+  width: 1em;
+}
+
+.FooterContainer #mail_icon {
+  width: 1.2em;
+}
+}
+
+
