@@ -20,7 +20,8 @@ export default function Home() {
         <div className='col-4' id='image_figure'></div>
         <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' id='prelude'>
           <h1>Farah</h1>
-          <h2>Un Beso con sabor a vino</h2>
+          <h2>Un Beso con</h2>
+          <h2>sabor a vino</h2>
           <h4>brief history</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
