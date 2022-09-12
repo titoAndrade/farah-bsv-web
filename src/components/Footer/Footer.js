@@ -1,6 +1,6 @@
-import whatsApp from '../images/whatsapp.svg'
-import instagram from '../images/instagram.svg'
-import mail from '../images/mail.svg'
+import whatsApp from '../../images/whatsapp.svg'
+import instagram from '../../images/instagram.svg'
+import mail from '../../images/mail.svg'
 
 export default function Footer() {
   return (
