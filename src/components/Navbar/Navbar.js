@@ -5,7 +5,7 @@ export default function Navbar() {
    const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="Navbar fixed-top">
-      <a className="nav-logo" href="/">home</a>
+      <Link to='/' className="nav-logo">Home</Link>
       <div className={`nav-items ${isOpen && "open"}`}>
         <Link to='/' onClick={() => setIsOpen(!isOpen)}>Inicio</Link>
         <Link to='/Tablas' onClick={() => setIsOpen(!isOpen)}>Tablas</Link>

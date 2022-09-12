@@ -59,6 +59,7 @@
   font-family: 'LaLuxes';
   font-size: 16px;
   z-index: 10;
+  
 }
 
 .nav-logo:hover {
@@ -335,6 +336,15 @@ video {
   width: 6em;
   height: 2em;
   border-radius: 1em;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #EDE4DB;
+}
+
+.card-link:hover {
+  color: #DCA15D;
 }
 
 #card_1 {

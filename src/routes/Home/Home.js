@@ -1,6 +1,8 @@
 import logotype from '../../images/logotype.svg'
 import video from '../../videos/backgroundVideoTest.mp4'
 
+import { Link } from 'react-router-dom'
+
 export default function Home() {
   return (
     <div id='homeContainer'>
@@ -33,25 +35,25 @@ export default function Home() {
         <div className='col-4' id='card_1'>
           <div className='product_container'>
             <h1>Tablas</h1>
-            <button>ver mas</button>
+            <button><Link to='/Tablas' className='card-link'>ver mas</Link></button>
           </div>
         </div>
         <div className='col-4' id='card_2'>
           <div className='product_container' id='container_alt'>
             <h1>Panes</h1>
-            <button>ver mas</button>
+            <button><Link to='/Panes' className='card-link'>ver mas</Link></button>
           </div>
         </div>
         <div className='col-4' id='card_3'>
           <div className='product_container'>
             <h1>Deeps</h1>
-            <button>ver mas</button>
+            <button><Link to='/Contacto' className='card-link'>ver mas</Link></button>
           </div>
         </div>
         <div className='col-4' id='card_4'>
           <div className='product_container' id='container_alt'>
             <h1>Vinos</h1>
-            <button>ver mas</button>
+            <button><Link to='/Nosotros' className='card-link'>ver mas</Link></button>
           </div>
         </div>
 
