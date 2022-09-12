@@ -1,5 +1,5 @@
-import logotype from '../images/logotype.svg'
-import video from '../videos/backgroundVideoTest.mp4'
+import logotype from '../../images/logotype.svg'
+import video from '../../videos/backgroundVideoTest.mp4'
 
 export default function Home() {
   return (

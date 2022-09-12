@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
    const [isOpen, setIsOpen] = useState(false);
@@ -6,11 +7,11 @@ export default function Navbar() {
     <div className="Navbar fixed-top">
       <a className="nav-logo" href="/">home</a>
       <div className={`nav-items ${isOpen && "open"}`}>
-        <a href="/home">Inicio</a>
-        <a href="/about">Tablas</a>
-        <a href="/service">Panes</a>
-        <a href="/contact">Sobre nosotros</a>
-        <a href="/contact" id="last">Contacto</a>
+        <Link to='/' onClick={() => setIsOpen(!isOpen)}>Inicio</Link>
+        <Link to='/Tablas' onClick={() => setIsOpen(!isOpen)}>Tablas</Link>
+        <Link to='/Panes' onClick={() => setIsOpen(!isOpen)}>Panes</Link>
+        <Link to='/Nosotros' onClick={() => setIsOpen(!isOpen)}>Nosotros</Link>
+        <Link to='/Contacto' onClick={() => setIsOpen(!isOpen)}>Contacto</Link>
       </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
