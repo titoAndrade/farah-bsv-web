@@ -209,7 +209,7 @@
 }
 
 video {
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 50%;
   top: 50%;
@@ -311,9 +311,9 @@ video {
   margin-inline: 3em;
   width: 12em;
   height: 22em;
-  border: solid 1px #DCA15D;
+  border: solid 2px #DCA15D;
   border-radius: 7em 7em 0 0;
-  outline: solid 1px #DCA15D;
+  outline: solid 2px #DCA15D;
   outline-offset: 8px;
 }
 
@@ -376,17 +376,85 @@ video {
   background: rgba(26, 48, 58, 0.65);
   margin-top: 114.6%;
   height: 10em;
-  margin-left: -0.76em;
+  margin-left: -0.75em;
   margin-right: -0.77em;
 }
 
 #fourth {
   margin: 0;
-  border: solid 2px cyan;
   width: 100%;
-  height: 92vh;
+  height: fit-content;
+  padding-block: 5em;
   background: none;
-  z-index: -1;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: #EDE4DB;
+}
+
+#sale_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60em;
+  /* height: 30em; */
+  height: fit-content;
+  padding-block: 2em;
+  border: solid 2px #DCA15D;
+  background: #1A303A;
+  border-radius: 2em;
+}
+
+#sale_card .col-xl-6 {
+  /* border: solid 1px #fff; */
+  text-align: center;
+  color: #EDE4DB;
+  margin-block: 2em;
+}
+
+
+#sale_card .text_h1 {
+  font-size: 2.5em;
+  font-family: 'LaLuxes';
+  font-weight: 900;
+  /* margin-top: 1em; */
+}
+
+#sale_card .text_h3 {
+  font-size: 2em;
+  font-family: 'Josefin';
+  color: #DCA15D;
+  margin-top: 1em;
+}
+
+#sale_card .text_p {
+  font-size: 1em;
+  font-family: 'Avenir';
+  text-align: justify;
+  padding-inline: 3em;
+}
+
+#sale_card .text_p2 {
+  font-size: 2.5em;
+  font-family: 'Avenir';
+}
+
+#sale_card img {
+  width: 15em;
+  border-radius: 7.5em 7.5em;
+  border: solid 2px #DCA15D;
+  outline: solid 2px #DCA15D;
+  outline-offset: 8px;
+}
+
+#sale_card button {
+  border: solid 2px #DCA15D;
+  color: #DCA15D;
+  font-family: 'Josefin';
+  font-size: 1.3em;
+  padding: 0.25em 1.5em;
+  background: none;
+  /* width: 12em;
+  height: 4em; */
+  border-radius: 2em;
 }
 
 /* __REFERENCE__ */
@@ -436,6 +504,7 @@ PALETTE {
   overflow: hidden;
   background: #EDE4DB;
   color: #000;
+  border-top: solid 1px #3f191e65;
 }
 
 .FooterContainer .row {

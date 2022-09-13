@@ -60,9 +60,25 @@ export default function Home() {
       </div>
 
       {/* __SECTION_4__ */}
-      {/* <div className='row justify-content-center align-items-center' id='fourth'>
-        hola
-      </div> */}
+      <div className='row justify-content-center align-items-center' id='fourth'>
+        <div className='row justify-content-center align-items-center' id='sale_card'>
+  
+          <div className='col-xl-6 col-lg-6 col-md-4 col-sm-10'>
+            <h1 className='text_h1'>OFERTA del mes</h1>
+            <h3 className='text_h3'>Tabla mediterránea para 8</h3>
+            <p className='text_p'>Rica tabla mediterránea compuesta por quesos y fiambres con frutos secos, pancitos y 2 deeps de tu elección</p>
+            <p className='text_p2'>
+              $ 259.900
+            </p>
+            <button>obtener</button>
+          </div>
+  
+          <div className='col-xl-6 col-lg-6 col-md-4 col-sm-10'>
+            <img src="https://i.pinimg.com/564x/4f/71/4b/4f714b11d6e132a5d286e091a8b44543.jpg" alt="tabla de quesos en oferta" />
+          </div>
+  
+        </div>
+      </div>
 
     </div>
   )
